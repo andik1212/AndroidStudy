@@ -2,10 +2,11 @@ package com.example.andik1212;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MyActivity extends Activity {
+public class MyActivity extends FragmentActivity {
     /**
      * Called when the activity is first created.
      */
@@ -23,14 +24,14 @@ public class MyActivity extends Activity {
 
 
         // находим список
-        ListView lvMain = (ListView) findViewById(R.id.lvMain);
+//        ListView lvMain = (ListView) findViewById(R.id.lvMain);
 
         // создаем адаптер
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_1, names);
+        /*ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, names);*/
 
         // присваиваем адаптер списку
-        lvMain.setAdapter(adapter);
+//        lvMain.setAdapter(adapter);
 
 //        fTrans = getFragmentManager().beginTransaction();
 //        frag1 = new Fragment1();
@@ -38,6 +39,10 @@ public class MyActivity extends Activity {
 //        fTrans.addToBackStack(null);
 //        fTrans.commit();
 
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction().add(R.id.frgmCont, new Fragment1()).commit();
+        }
 
     }
 }
