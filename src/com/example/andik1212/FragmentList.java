@@ -19,7 +19,7 @@ import java.util.ArrayList;
 
 public class FragmentList extends Fragment {
 
-    String[] values = new String[0]; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
+    String[] values ; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
     GetNews loader;
     //временно
 //        String[] content = new String[0];
@@ -57,15 +57,16 @@ public class FragmentList extends Fragment {
         loader.run();
         while(!GetNews.finished){}
         _self.articles=loader.returner();
-        for (int i = 0; i <= _self.articles.length; i++){
-//            Article art = (Article) _self.articles.elementAt(i);
-//            values[i]= art.getTitle();
+        Article art;
+        for (int i = 0; i <= _self.articles.size(); i++){
+            art = (Article)_self.articles.elementAt(i);
+            values[i]= art.getTitle();
         }
         hideLoadingIndicator();
 
 
 
-        Toast.makeText(_self.activity, "val "+_self.articles.length, Toast.LENGTH_LONG).show();
+        Toast.makeText(_self.activity, "val "+_self.articles.size(), Toast.LENGTH_LONG).show();
 
 
 

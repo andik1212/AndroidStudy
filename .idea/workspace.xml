@@ -34,6 +34,47 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" line="60" class="com.example.andik1212.FragmentList" package="com.example.andik1212">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" line="61" class="com.example.andik1212.FragmentList" package="com.example.andik1212">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" line="62" class="com.example.andik1212.FragmentList" package="com.example.andik1212">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -83,22 +124,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragmentList.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FragmentList.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="67" column="60" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
+            <state line="62" column="38" selection-start="1818" selection-end="1844" vertical-scroll-proportion="0.60912055">
               <folding>
-                <element signature="e#2176#2184#0" expanded="true" />
-                <element signature="e#2354#2804#0" expanded="true" />
-                <element signature="e#2793#2794#0" expanded="true" />
-                <element signature="e#2892#3196#0" expanded="true" />
-                <element signature="e#3185#3186#0" expanded="true" />
-                <element signature="e#3273#3461#0" expanded="true" />
-                <element signature="e#3450#3451#0" expanded="true" />
-                <element signature="e#3550#3825#0" expanded="true" />
-                <element signature="e#3814#3815#0" expanded="true" />
-                <element signature="e#3914#4194#0" expanded="true" />
-                <element signature="e#4183#4184#0" expanded="true" />
+                <element signature="e#2169#2177#0" expanded="true" />
+                <element signature="e#2347#2797#0" expanded="true" />
+                <element signature="e#2786#2787#0" expanded="true" />
+                <element signature="e#2885#3189#0" expanded="true" />
+                <element signature="e#3178#3179#0" expanded="true" />
+                <element signature="e#3266#3454#0" expanded="true" />
+                <element signature="e#3443#3444#0" expanded="true" />
+                <element signature="e#3543#3818#0" expanded="true" />
+                <element signature="e#3807#3808#0" expanded="true" />
+                <element signature="e#3907#4187#0" expanded="true" />
+                <element signature="e#4176#4177#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -116,10 +157,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetNews.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GetNews.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/GetNews.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="77" column="135" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.23428571">
+            <state line="50" column="0" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,7 +169,7 @@
       <file leaf-file-name="ArticleCollection.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/ArticleCollection.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="31" column="42" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0">
+            <state line="24" column="46" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -139,7 +180,7 @@
       <file leaf-file-name="Article.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/Article.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="18" column="11" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
+            <state line="24" column="22" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -210,8 +251,8 @@
         <option value="$PROJECT_DIR$/src/com/example/andik1212/GetNews.java" />
         <option value="$PROJECT_DIR$/src/com/example/andik1212/helper/Article.java" />
         <option value="$PROJECT_DIR$/src/com/example/andik1212/helper/ArticleCollection.java" />
-        <option value="$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" />
         <option value="$PROJECT_DIR$/src/com/example/andik1212/helper/GetNews.java" />
+        <option value="$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" />
       </list>
     </option>
   </component>
@@ -573,7 +614,9 @@
       <option name="NETWORK_SPEED" value="full" />
       <option name="NETWORK_LATENCY" value="none" />
       <option name="CLEAR_LOGCAT" value="false" />
+      <RunnerSettings RunnerId="AndroidDebugRunner" />
       <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="AndroidDebugRunner" />
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
@@ -622,17 +665,17 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.6728499" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24981017" sideWeight="0.6728499" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39966273" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.6728499" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939255" sideWeight="0.6728499" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18375094" sideWeight="0.6728499" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18375094" sideWeight="0.60033727" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24789207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.6703297" order="3" side_tool="false" content_ui="tabs" />
@@ -746,45 +789,45 @@
         <state line="57" column="45" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="11" selection-start="336" selection-end="336" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/ArticleCollection.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="31" column="42" selection-start="955" selection-end="955" vertical-scroll-proportion="0.0">
+        <state line="24" column="46" selection-start="632" selection-end="632" vertical-scroll-proportion="0.0">
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/GetNews.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="67" column="60" selection-start="1957" selection-end="1957" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#2176#2184#0" expanded="true" />
-            <element signature="e#2354#2804#0" expanded="true" />
-            <element signature="e#2793#2794#0" expanded="true" />
-            <element signature="e#2892#3196#0" expanded="true" />
-            <element signature="e#3185#3186#0" expanded="true" />
-            <element signature="e#3273#3461#0" expanded="true" />
-            <element signature="e#3450#3451#0" expanded="true" />
-            <element signature="e#3550#3825#0" expanded="true" />
-            <element signature="e#3814#3815#0" expanded="true" />
-            <element signature="e#3914#4194#0" expanded="true" />
-            <element signature="e#4183#4184#0" expanded="true" />
-          </folding>
+        <state line="50" column="0" selection-start="1485" selection-end="1485" vertical-scroll-proportion="0.0">
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/GetNews.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/Article.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="77" column="135" selection-start="2610" selection-end="2610" vertical-scroll-proportion="0.23428571">
+        <state line="24" column="22" selection-start="579" selection-end="579" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="62" column="38" selection-start="1818" selection-end="1844" vertical-scroll-proportion="0.60912055">
+          <folding>
+            <element signature="e#2169#2177#0" expanded="true" />
+            <element signature="e#2347#2797#0" expanded="true" />
+            <element signature="e#2786#2787#0" expanded="true" />
+            <element signature="e#2885#3189#0" expanded="true" />
+            <element signature="e#3178#3179#0" expanded="true" />
+            <element signature="e#3266#3454#0" expanded="true" />
+            <element signature="e#3443#3444#0" expanded="true" />
+            <element signature="e#3543#3818#0" expanded="true" />
+            <element signature="e#3807#3808#0" expanded="true" />
+            <element signature="e#3907#4187#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

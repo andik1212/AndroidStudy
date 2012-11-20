@@ -45,9 +45,8 @@ public class GetNews extends Thread{
     public void run(){
         String data = this.load();
 
-        JSONObject jo = null;
         try {
-            jo = new JSONObject(data);
+            JSONObject jo = new JSONObject(data);
             localArticles = new ArticleCollection().fromJson(jo);
             finished = true;
             } catch (JSONException e) {
