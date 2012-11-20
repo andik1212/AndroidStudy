@@ -78,21 +78,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FragmentList.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="FragmentList.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="30" selection-start="2618" selection-end="2618" vertical-scroll-proportion="0.0">
+            <state line="68" column="61" selection-start="1994" selection-end="2007" vertical-scroll-proportion="0.50629723">
               <folding>
-                <element signature="e#1829#1837#0" expanded="true" />
-                <element signature="e#2007#2457#0" expanded="true" />
-                <element signature="e#2446#2447#0" expanded="true" />
-                <element signature="e#3649#3650#0" expanded="true" />
-                <element signature="e#3739#3927#0" expanded="true" />
-                <element signature="e#3916#3917#0" expanded="true" />
-                <element signature="e#4016#4291#0" expanded="true" />
-                <element signature="e#4280#4281#0" expanded="true" />
-                <element signature="e#4380#4660#0" expanded="true" />
-                <element signature="e#4649#4650#0" expanded="true" />
+                <element signature="e#2169#2177#0" expanded="true" />
+                <element signature="e#2347#2797#0" expanded="true" />
+                <element signature="e#2786#2787#0" expanded="true" />
+                <element signature="e#2885#3189#0" expanded="true" />
+                <element signature="e#3178#3179#0" expanded="true" />
+                <element signature="e#3266#3454#0" expanded="true" />
+                <element signature="e#3443#3444#0" expanded="true" />
+                <element signature="e#3543#3818#0" expanded="true" />
+                <element signature="e#3807#3808#0" expanded="true" />
+                <element signature="e#3907#4187#0" expanded="true" />
+                <element signature="e#4176#4177#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -102,15 +103,18 @@
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentDetail.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="57" column="45" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0">
-              <folding />
+              <folding>
+                <element signature="e#1501#1700#0" expanded="true" />
+                <element signature="e#1689#1690#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GetNews.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="GetNews.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/GetNews.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="43" column="0" selection-start="1257" selection-end="1448" vertical-scroll-proportion="0.36857143">
+            <state line="50" column="28" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -194,8 +198,8 @@
         <option value="$PROJECT_DIR$/src/com/example/andik1212/GetNews.java" />
         <option value="$PROJECT_DIR$/src/com/example/andik1212/helper/ArticleCollection.java" />
         <option value="$PROJECT_DIR$/src/com/example/andik1212/helper/Article.java" />
-        <option value="$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" />
         <option value="$PROJECT_DIR$/src/com/example/andik1212/helper/GetNews.java" />
+        <option value="$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" />
       </list>
     </option>
   </component>
@@ -608,13 +612,13 @@
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32715008" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18375094" sideWeight="0.6728499" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24789207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18375094" sideWeight="0.7521079" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24789207" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32820514" sideWeight="0.6703297" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -717,11 +721,6 @@
         <state line="16" column="0" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentDetail.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="57" column="45" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/ArticleCollection.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="45" selection-start="718" selection-end="718" vertical-scroll-proportion="0.0">
@@ -743,28 +742,34 @@
         <state line="13" column="46" selection-start="706" selection-end="706" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
+    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentDetail.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="30" selection-start="2618" selection-end="2618" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#1829#1837#0" expanded="true" />
-            <element signature="e#2007#2457#0" expanded="true" />
-            <element signature="e#2446#2447#0" expanded="true" />
-            <element signature="e#3649#3650#0" expanded="true" />
-            <element signature="e#3739#3927#0" expanded="true" />
-            <element signature="e#3916#3917#0" expanded="true" />
-            <element signature="e#4016#4291#0" expanded="true" />
-            <element signature="e#4280#4281#0" expanded="true" />
-            <element signature="e#4380#4660#0" expanded="true" />
-            <element signature="e#4649#4650#0" expanded="true" />
-          </folding>
-        </state>
+        <state line="57" column="45" selection-start="1702" selection-end="1702" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/helper/GetNews.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="0" selection-start="1257" selection-end="1448" vertical-scroll-proportion="0.36857143">
+        <state line="50" column="28" selection-start="1540" selection-end="1540" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="68" column="61" selection-start="1994" selection-end="2007" vertical-scroll-proportion="0.50629723">
+          <folding>
+            <element signature="e#2169#2177#0" expanded="true" />
+            <element signature="e#2347#2797#0" expanded="true" />
+            <element signature="e#2786#2787#0" expanded="true" />
+            <element signature="e#2885#3189#0" expanded="true" />
+            <element signature="e#3178#3179#0" expanded="true" />
+            <element signature="e#3266#3454#0" expanded="true" />
+            <element signature="e#3443#3444#0" expanded="true" />
+            <element signature="e#3543#3818#0" expanded="true" />
+            <element signature="e#3807#3808#0" expanded="true" />
+            <element signature="e#3907#4187#0" expanded="true" />
+            <element signature="e#4176#4177#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

@@ -22,6 +22,7 @@ import java.io.IOException;
 public class FragmentList extends Fragment {
 
     String[] values = new String[0]; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
+    GetNews loader;
     //временно
 //        String[] content = new String[0];
 
@@ -53,15 +54,19 @@ public class FragmentList extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        showLoadingIndicator();
+        loader = new GetNews();
+        loader.run(_self.articles);
+        while(!GetNews.finished){}
+//        for (int i = 0; i <= _self.articles.size(); i++){
+//            Article art = (Article) _self.articles.get(i);
+//            values[i]= art.getTitle();
+//        }
+        hideLoadingIndicator();
 
-        loadNews();
 
 
-//        Toast.makeText(_self.activity, "Loading News...", Toast.LENGTH_LONG).show();
-
-
-
-
+//        Toast.makeText(_self.activity, "val "+values.length, Toast.LENGTH_LONG).show();
 
 
 
@@ -85,35 +90,15 @@ public class FragmentList extends Fragment {
     }
 
 
-    private void loadNews(){
 
-        showLoadingIndicator();
-        new Thread(new Runnable() {
+
+    private void showLoadingError() {
+        _self.activity.runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
-
-                try {
-
-                    String data = GetNews.load();
-                    JSONObject jo = new JSONObject(data);
-                    _self.articles = new ArticleCollection().fromJson(jo);
-                    Toast.makeText(_self.activity, "bla-bla", Toast.LENGTH_LONG).show();
-//                    for (int i = 0; i <= _self.articles.size(); i++){
-//                        Article art = (Article) _self.articles.get(i);
-//                        values[i]= art.getTitle();
-//                    }
-//                    updateUi();
-                } catch (JSONException e) {
-                    e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
-                    Toast.makeText(_self.activity, "Something goes wrong during parsing ;(", Toast.LENGTH_LONG).show();
-                } finally {
-                    hideLoadingIndicator();
-                }
-
+                Toast.makeText(_self.activity, "Something goes wrong during parsing ;(", Toast.LENGTH_LONG).show();
             }
-
-
         });
     }
 

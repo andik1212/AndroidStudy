@@ -10,6 +10,7 @@ import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.params.HttpConnectionParams;
 import org.apache.http.params.HttpParams;
 import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.BufferedReader;
@@ -27,13 +28,32 @@ import java.net.URLConnection;
  * Time: 11:28
  * To change this template use File | Settings | File Templates.
  */
-public class GetNews {
+public class GetNews extends Thread{
     private JSONArray jNewsArray = null;
     private static String answer;
-    public GetNews(JSONArray jArray){
-        this.jNewsArray=jArray;
-    }
+    private static String error;
+    public static Boolean finished = false;
+//    public GetNews(JSONArray jArray){
+//        this.jNewsArray=jArray;
+//    }
+//    private ArticleCollection localArticles;
+//    public GetNews(ArticleCollection artColl){
+//        localArticles=artColl;
+//    }
 
+    public void run(ArticleCollection localArticles){
+        String data = GetNews.load();
+
+        JSONObject jo = null;
+        try {
+            jo = new JSONObject(data);
+            localArticles = new ArticleCollection().fromJson(jo);
+            finished = true;
+        } catch (JSONException e) {
+            e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+        }
+
+    }
     public static String load(){
         URL url = null;
 
