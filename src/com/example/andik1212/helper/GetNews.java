@@ -20,6 +20,7 @@ import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
 
 /**
  * Created with IntelliJ IDEA.
@@ -36,25 +37,28 @@ public class GetNews extends Thread{
 //    public GetNews(JSONArray jArray){
 //        this.jNewsArray=jArray;
 //    }
-//    private ArticleCollection localArticles;
+    private ArticleCollection localArticles;
 //    public GetNews(ArticleCollection artColl){
 //        localArticles=artColl;
 //    }
 
-    public void run(ArticleCollection localArticles){
-        String data = GetNews.load();
+    public void run(){
+        String data = this.load();
 
         JSONObject jo = null;
         try {
             jo = new JSONObject(data);
             localArticles = new ArticleCollection().fromJson(jo);
             finished = true;
-        } catch (JSONException e) {
+            } catch (JSONException e) {
             e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
         }
 
     }
-    public static String load(){
+    public ArticleCollection returner(){
+            return localArticles;
+    }
+    protected static String load(){
         URL url = null;
 
         try {
@@ -74,7 +78,6 @@ public class GetNews extends Thread{
                 }
             }
             answer=allpage.toString();
-
         }
         catch (IOException e){
             Log.e("Error : ", "Error on soapPrimitiveData() " + e.getMessage());

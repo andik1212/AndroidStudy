@@ -4,6 +4,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.Vector;
 
 /**
@@ -14,6 +15,11 @@ import java.util.Vector;
  * To change this template use File | Settings | File Templates.
  */
 public class ArticleCollection extends Vector{
+    public static void setLength(int length) {
+        length = length;
+    }
+
+    public int length = 0;
     public static ArticleCollection fromJson(JSONObject jo) throws JSONException {
         ArticleCollection collection = new ArticleCollection();
 
@@ -22,6 +28,8 @@ public class ArticleCollection extends Vector{
 
         for (int i = 0; i < jsonEntry.length(); i++) {
             collection.add(new Article(jsonEntry.getJSONObject(i)));
+            collection.elementAt(i);
+            ArticleCollection.setLength(i);
         }
 
         return collection;

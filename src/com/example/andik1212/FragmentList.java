@@ -7,10 +7,7 @@ import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.Toast;
+import android.widget.*;
 import com.example.andik1212.helper.Article;
 import com.example.andik1212.helper.ArticleCollection;
 import com.example.andik1212.helper.GetNews;
@@ -18,6 +15,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class FragmentList extends Fragment {
 
@@ -56,23 +54,25 @@ public class FragmentList extends Fragment {
         super.onActivityCreated(savedInstanceState);
         showLoadingIndicator();
         loader = new GetNews();
-        loader.run(_self.articles);
+        loader.run();
         while(!GetNews.finished){}
-//        for (int i = 0; i <= _self.articles.size(); i++){
-//            Article art = (Article) _self.articles.get(i);
+        _self.articles=loader.returner();
+        for (int i = 0; i <= _self.articles.length; i++){
+//            Article art = (Article) _self.articles.elementAt(i);
 //            values[i]= art.getTitle();
-//        }
+        }
         hideLoadingIndicator();
 
 
 
-//        Toast.makeText(_self.activity, "val "+values.length, Toast.LENGTH_LONG).show();
+        Toast.makeText(_self.activity, "val "+_self.articles.length, Toast.LENGTH_LONG).show();
 
 
 
 
                 ListView list = (ListView) view.findViewById(R.id.list);
 
+//        list.setAdapter((ListAdapter) arrList);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
                 android.R.id.text1, values);
 
