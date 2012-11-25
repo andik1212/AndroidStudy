@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.*;
 import com.example.andik1212.helper.Article;
 import com.example.andik1212.helper.ArticleCollection;
+import com.example.andik1212.helper.CustomArrayAdapter;
 import com.example.andik1212.helper.GetNews;
 
 public class FragmentList extends Fragment {
@@ -118,8 +119,9 @@ public class FragmentList extends Fragment {
                 //To change body of implemented methods use File | Settings | File Templates.
                 ListView list = (ListView) view.findViewById(R.id.list);
 
-                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
-                        android.R.id.text1, values);
+//                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_2,
+//                        android.R.id.text1, values);
+                CustomArrayAdapter adapter = new CustomArrayAdapter(getActivity(), values, date);
 
                 list.setAdapter(adapter);
 
