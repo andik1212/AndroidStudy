@@ -14,9 +14,9 @@ import com.example.andik1212.helper.GetNews;
 
 public class FragmentList extends Fragment {
 
-    String[] values; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
-    String[] date;
-    String[] content;
+    static String[] values; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
+    static String[] date;
+    static String[] content;
     GetNews loader;
     //временно
 //        String[] content = new String[0];
@@ -29,7 +29,7 @@ public class FragmentList extends Fragment {
         public ArticleCollection articles;
     }
 
-    Self _self = new Self();
+    static Self _self = new Self();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -49,7 +49,7 @@ public class FragmentList extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        if (_self.restore&&_self.articles != null && _self.articles.size() > 0){
+        if (_self.restore && _self.articles.size() > 0){
             updateUi();
             _self.restore = false;
         } else{

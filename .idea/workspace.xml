@@ -34,6 +34,47 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" line="74" class="com.example.andik1212.FragmentList" package="com.example.andik1212">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" line="76" class="com.example.andik1212.FragmentList" package="com.example.andik1212">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint url="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java" line="77" class="com.example.andik1212.FragmentList" package="com.example.andik1212">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="false" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_any>
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -77,11 +118,11 @@
       <file leaf-file-name="FragmentList.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="128" column="9" selection-start="3795" selection-end="3795" vertical-scroll-proportion="4.826633">
+            <state line="100" column="6" selection-start="2650" selection-end="2650" vertical-scroll-proportion="3.844221">
               <folding>
-                <element signature="e#3407#3415#0" expanded="true" />
-                <element signature="e#3609#4281#0" expanded="true" />
-                <element signature="e#4262#4263#0" expanded="true" />
+                <element signature="e#3411#3419#0" expanded="true" />
+                <element signature="e#3613#4285#0" expanded="true" />
+                <element signature="e#4266#4267#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -625,7 +666,7 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32953683" sideWeight="0.6728499" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39939255" sideWeight="0.6728499" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.18299165" sideWeight="0.75379425" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24620573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24620573" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -773,11 +814,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/andik1212/FragmentList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="128" column="9" selection-start="3795" selection-end="3795" vertical-scroll-proportion="4.826633">
+        <state line="100" column="6" selection-start="2650" selection-end="2650" vertical-scroll-proportion="3.844221">
           <folding>
-            <element signature="e#3407#3415#0" expanded="true" />
-            <element signature="e#3609#4281#0" expanded="true" />
-            <element signature="e#4262#4263#0" expanded="true" />
+            <element signature="e#3411#3419#0" expanded="true" />
+            <element signature="e#3613#4285#0" expanded="true" />
+            <element signature="e#4266#4267#0" expanded="true" />
           </folding>
         </state>
       </provider>
