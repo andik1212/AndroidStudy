@@ -67,16 +67,16 @@ public class GetNews extends Thread{
 //            HttpConnectionParams.setConnectionTimeout((HttpParams) conn, 200/*CONNECTION_TIMEOUT*/);
 //            HttpConnectionParams.setSoTimeout((HttpParams) conn, 200/*SOCKET_TIMEOUT*/);
             InputStreamReader rd = new InputStreamReader(conn.getInputStream());
-            StringBuilder allpage = new StringBuilder();
+            StringBuilder allPage = new StringBuilder();
             int n = 0;
             char[] buffer = new char[40000];
             while (n >= 0){
                 n = rd.read(buffer, 0, buffer.length);
                 if (n > 0){
-                    allpage.append(buffer, 0, n);
+                    allPage.append(buffer, 0, n);
                 }
             }
-            answer=allpage.toString();
+            answer=allPage.toString();
         }
         catch (IOException e){
             Log.e("Error : ", "Error on soapPrimitiveData() " + e.getMessage());

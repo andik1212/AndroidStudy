@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentTransaction;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
 
@@ -16,12 +17,12 @@ public class FragmentDetail extends Fragment {
     private static final int REQUEST_NUMBER = 1;
 
     private View view;
-    private String text;
+    private String[] text;
 
-    public static FragmentDetail newInstance(String text) {
+    public static FragmentDetail newInstance(String[] text) {
         FragmentDetail f = new FragmentDetail();
         Bundle args = new Bundle();
-        args.putString(EXTRA_TEXT, text);
+        args.putStringArray(EXTRA_TEXT, text);
         f.setArguments(args);
         return f;
     }
@@ -31,7 +32,7 @@ public class FragmentDetail extends Fragment {
         super.onCreate(savedInstanceState);
         Bundle args = getArguments();
         if (args != null) {
-            text = args.getString(EXTRA_TEXT);
+            text = args.getStringArray(EXTRA_TEXT);
         }
     }
 
@@ -46,14 +47,17 @@ public class FragmentDetail extends Fragment {
         super.onActivityCreated(savedInstanceState);
 
         if (savedInstanceState != null) {
-            text = savedInstanceState.getString("text");
+            text = savedInstanceState.getStringArray("text");
         }
 
         getActivity().runOnUiThread(new Runnable() {
             @Override
             public void run() {
                 TextView tv = (TextView) view.findViewById(R.id.text);
-                tv.setText(text);
+                tv.setText(text[0]);
+                WebView wv = (WebView) view.findViewById(R.id.web);
+                wv.loadData(text[1], "text/html", null);
+
             }
         });
 
@@ -76,19 +80,19 @@ public class FragmentDetail extends Fragment {
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        outState.putString("text", text);
+        outState.putStringArray("text", text);
     }
 
-    public void setText(final String number, final int requestCode) {
-        getActivity().runOnUiThread(new Runnable() {
-            @Override
-            public void run() {
-                switch (requestCode) {
-                    case 1:
-                        text = text + " " + number;
-                        break;
-                }
-            }
-        });
-    }
+//    public void setText(final String number, final int requestCode) {
+//        getActivity().runOnUiThread(new Runnable() {
+//            @Override
+//            public void run() {
+//                switch (requestCode) {
+//                    case 1:
+//                        text = text + " " + number;
+//                        break;
+//                }
+//            }
+//        });
+//    }
 }

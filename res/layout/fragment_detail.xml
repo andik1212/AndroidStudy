@@ -9,11 +9,14 @@
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textStyle="bold"
-            android:gravity="center_horizontal"/>
-
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"/>
+    <WebView
+        android:id="@+id/web"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
 
 </LinearLayout>

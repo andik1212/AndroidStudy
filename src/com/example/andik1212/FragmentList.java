@@ -11,15 +11,12 @@ import android.widget.*;
 import com.example.andik1212.helper.Article;
 import com.example.andik1212.helper.ArticleCollection;
 import com.example.andik1212.helper.GetNews;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.io.IOException;
-import java.util.ArrayList;
 
 public class FragmentList extends Fragment {
 
-    String[] values ; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
+    String[] values; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
+    String[] date;
+    String[] content;
     GetNews loader;
     //временно
 //        String[] content = new String[0];
@@ -58,22 +55,29 @@ public class FragmentList extends Fragment {
         while(!GetNews.finished){}
         _self.articles=loader.returner();
         Article art;
-        for (int i = 0; i <= _self.articles.size(); i++){
+        values = new String[_self.articles.size()];
+        date = new String[_self.articles.size()];
+        content = new String[_self.articles.size()];
+        for (int i = 0; i < _self.articles.size(); i++){
             art = (Article)_self.articles.elementAt(i);
             values[i]= art.getTitle();
+            date[i]= art.getDate();
+            date[i]=date[i].substring(0, 10);
+            content[i]= art.getContent();
+
+//            Toast.makeText(_self.activity, art.getTitle(), Toast.LENGTH_SHORT).show();
         }
         hideLoadingIndicator();
 
 
 
-        Toast.makeText(_self.activity, "val "+_self.articles.size(), Toast.LENGTH_LONG).show();
+//        Toast.makeText(_self.activity, "val "+_self.articles.size(), Toast.LENGTH_LONG).show();
 
 
 
 
                 ListView list = (ListView) view.findViewById(R.id.list);
 
-//        list.setAdapter((ListAdapter) arrList);
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
                 android.R.id.text1, values);
 
@@ -82,9 +86,12 @@ public class FragmentList extends Fragment {
         list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-                String text = (String) adapterView.getItemAtPosition(position);
+//                String text = (String) adapterView.getItemAtPosition(position);
+                String[] extra = new String[2];
+                extra[0] = values[position];
+                extra[1] = content[position];
                 Intent intent = new Intent(getActivity(), ActivityDetail.class);
-                intent.putExtra(FragmentDetail.EXTRA_TEXT, text);
+                intent.putExtra(FragmentDetail.EXTRA_TEXT, extra);
                 startActivity(intent);
             }
         });

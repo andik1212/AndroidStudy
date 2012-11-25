@@ -18,9 +18,9 @@ public class ActivityDetail extends FragmentActivity {
     }
 
     private void handleIntentExtras(Intent intent) {
-        String text = "";
+        String[] text = new String[2];
         if (intent.hasExtra(FragmentDetail.EXTRA_TEXT)) {
-            text = intent.getStringExtra(FragmentDetail.EXTRA_TEXT);
+            text = intent.getStringArrayExtra(FragmentDetail.EXTRA_TEXT);
         }
 
         FragmentDetail fragmentDetail = FragmentDetail.newInstance(text);
