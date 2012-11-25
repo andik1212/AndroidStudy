@@ -49,6 +49,35 @@ public class FragmentList extends Fragment {
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        if (_self.restore&&_self.articles != null && _self.articles.size() > 0){
+            updateUi();
+            _self.restore = false;
+        } else{
+            loadData();
+        }
+
+
+
+
+
+
+//        Toast.makeText(_self.activity, "val "+_self.articles.size(), Toast.LENGTH_LONG).show();
+
+
+
+
+
+    }
+
+
+    @Override
+    public void onPause() {
+        super.onPause();
+
+        _self.restore = true;
+    }
+
+    private void loadData() {
         showLoadingIndicator();
         loader = new GetNews();
         loader.run();
@@ -68,36 +97,8 @@ public class FragmentList extends Fragment {
 //            Toast.makeText(_self.activity, art.getTitle(), Toast.LENGTH_SHORT).show();
         }
         hideLoadingIndicator();
-
-
-
-//        Toast.makeText(_self.activity, "val "+_self.articles.size(), Toast.LENGTH_LONG).show();
-
-
-
-
-                ListView list = (ListView) view.findViewById(R.id.list);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
-                android.R.id.text1, values);
-
-        list.setAdapter(adapter);
-
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
-//                String text = (String) adapterView.getItemAtPosition(position);
-                String[] extra = new String[2];
-                extra[0] = values[position];
-                extra[1] = content[position];
-                Intent intent = new Intent(getActivity(), ActivityDetail.class);
-                intent.putExtra(FragmentDetail.EXTRA_TEXT, extra);
-                startActivity(intent);
-            }
-        });
+        updateUi();
     }
-
-
 
 
     private void showLoadingError() {
@@ -115,6 +116,25 @@ public class FragmentList extends Fragment {
             @Override
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
+                ListView list = (ListView) view.findViewById(R.id.list);
+
+                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_1,
+                        android.R.id.text1, values);
+
+                list.setAdapter(adapter);
+
+                list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+//                String text = (String) adapterView.getItemAtPosition(position);
+                        String[] extra = new String[2];
+                        extra[0] = values[position];
+                        extra[1] = content[position];
+                        Intent intent = new Intent(getActivity(), ActivityDetail.class);
+                        intent.putExtra(FragmentDetail.EXTRA_TEXT, extra);
+                        startActivity(intent);
+                    }
+                });
             }
         });
     }
