@@ -60,7 +60,7 @@ public class FragmentList extends Fragment {
             updateUi();
             _self.restore = false;
         } else{
-            if (MainActivity.INTERNET_STATUS == "UP"){
+            if (MainActivity.INTERNET_STATUS == "com.example.andik1212.UP"){
                 loadData();
             }
             else{

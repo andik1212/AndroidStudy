@@ -10,7 +10,7 @@ import android.util.Log;
 import android.widget.Toast;
 
 public class MainActivity extends FragmentActivity {
-    public static String INTERNET_STATUS = "DOWN";
+    public static String INTERNET_STATUS = "com.example.andik1212.DOWN";
 
     /**
      * Called when the activity is first created.
@@ -31,10 +31,10 @@ public class MainActivity extends FragmentActivity {
         ConnectivityManager cm = (ConnectivityManager)context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo nInfo = cm.getActiveNetworkInfo();
         if (nInfo != null && nInfo.isConnected()) {
-            INTERNET_STATUS = "UP";
+            INTERNET_STATUS = "com.example.andik1212.UP";
         }
         else {
-            INTERNET_STATUS = "DOWN";
+            INTERNET_STATUS = "com.example.andik1212.DOWN";
         }
         sendBroadcast(new Intent(INTERNET_STATUS));
 
