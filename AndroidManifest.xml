@@ -12,6 +12,7 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <service android:name=".services.InternetCheckService" />
         <activity android:name="ActivityDetail"/>
         <receiver
             android:name="com.example.andik1212.FragmentList$BroadcastListener">
@@ -19,5 +20,17 @@
                 <action android:name="com.example.andik1212.DOWN" />
             </intent-filter>
         </receiver>
+        <receiver
+                android:name="com.example.andik1212.FragmentList$BroadcastListenerOn">
+            <intent-filter>
+                <action android:name="com.example.andik1212.UP" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.example.andik1212.MainActivity$BroadcastListenerUpdateAndCheck">
+            <intent-filter>
+                <action android:name="com.example.andik1212.UPDATE" />
+            </intent-filter>
+            </receiver>
     </application>
 </manifest>

@@ -16,6 +16,7 @@ import com.example.andik1212.helper.Article;
 import com.example.andik1212.helper.ArticleCollection;
 import com.example.andik1212.helper.CustomArrayAdapter;
 import com.example.andik1212.helper.GetNews;
+import com.example.andik1212.services.InternetCheckService;
 
 public class FragmentList extends Fragment {
     private static FragmentList Instance;
@@ -77,7 +78,7 @@ public class FragmentList extends Fragment {
         _self.restore = true;
     }
 
-    private void loadData() {
+    protected void loadData() {
         showLoadingIndicator();
         loader = new GetNews();
         loader.run();
@@ -174,6 +175,18 @@ public class FragmentList extends Fragment {
             String action = intent.getAction();
             if (action.equals(MainActivity.INTERNET_STATUS)){
                 Toast.makeText(_self.activity, "NO connection to internet!", Toast.LENGTH_LONG).show();
+            }
+
+        }
+    }
+    public static class BroadcastListenerOn extends BroadcastReceiver {
+        public void onReceive(Context context, Intent intent){
+            if (Instance == null || intent == null){
+                return;
+            }
+            String action = intent.getAction();
+            if (action.equals(MainActivity.INTERNET_STATUS)){
+                Toast.makeText(_self.activity, "Internet connected!", Toast.LENGTH_LONG).show();
             }
 
         }
