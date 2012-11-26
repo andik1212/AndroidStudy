@@ -1,5 +1,8 @@
 package com.example.andik1212.helper;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.util.Log;
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -41,6 +44,7 @@ public class GetNews extends Thread{
 //    public GetNews(ArticleCollection artColl){
 //        localArticles=artColl;
 //    }
+
 
     public void run(){
         String data = this.load();

@@ -1,6 +1,10 @@
 package com.example.andik1212;
 
+import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
@@ -14,6 +18,7 @@ import com.example.andik1212.helper.CustomArrayAdapter;
 import com.example.andik1212.helper.GetNews;
 
 public class FragmentList extends Fragment {
+    private static FragmentList Instance;
 
     static String[] values; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
     static String[] date;
@@ -37,6 +42,7 @@ public class FragmentList extends Fragment {
         super.onCreate(savedInstanceState);
 
         _self.activity = getActivity();
+        Instance = this;
     }
 
     private View view;
@@ -54,20 +60,13 @@ public class FragmentList extends Fragment {
             updateUi();
             _self.restore = false;
         } else{
-            loadData();
+            if (MainActivity.INTERNET_STATUS == "UP"){
+                loadData();
+            }
+            else{
+                showLoadingError();
+            }
         }
-
-
-
-
-
-
-//        Toast.makeText(_self.activity, "val "+_self.articles.size(), Toast.LENGTH_LONG).show();
-
-
-
-
-
     }
 
 
@@ -107,7 +106,7 @@ public class FragmentList extends Fragment {
             @Override
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
-                Toast.makeText(_self.activity, "Something goes wrong during parsing ;(", Toast.LENGTH_LONG).show();
+                Toast.makeText(_self.activity, "We loose an internet connection ;(", Toast.LENGTH_LONG).show();
             }
         });
     }
@@ -117,26 +116,29 @@ public class FragmentList extends Fragment {
             @Override
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
-                ListView list = (ListView) view.findViewById(R.id.list);
+                if (_self.articles.size() > 0){
+                    ListView list = (ListView) view.findViewById(R.id.list);
 
 //                ArrayAdapter<String> adapter = new ArrayAdapter<String>(getActivity(), android.R.layout.simple_list_item_2,
 //                        android.R.id.text1, values);
-                CustomArrayAdapter adapter = new CustomArrayAdapter(getActivity(), values, date);
+                    CustomArrayAdapter adapter = new CustomArrayAdapter(getActivity(), values, date);
 
-                list.setAdapter(adapter);
+                    list.setAdapter(adapter);
 
-                list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-                    @Override
-                    public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
+                    list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                        @Override
+                        public void onItemClick(AdapterView<?> adapterView, View view, int position, long l) {
 //                String text = (String) adapterView.getItemAtPosition(position);
-                        String[] extra = new String[2];
-                        extra[0] = values[position];
-                        extra[1] = content[position];
-                        Intent intent = new Intent(getActivity(), ActivityDetail.class);
-                        intent.putExtra(FragmentDetail.EXTRA_TEXT, extra);
-                        startActivity(intent);
-                    }
-                });
+                            String[] extra = new String[2];
+                            extra[0] = values[position];
+                            extra[1] = content[position];
+                            Intent intent = new Intent(getActivity(), ActivityDetail.class);
+                            intent.putExtra(FragmentDetail.EXTRA_TEXT, extra);
+                            startActivity(intent);
+                        }
+                    });
+                }
+
             }
         });
     }
@@ -146,7 +148,7 @@ public class FragmentList extends Fragment {
             @Override
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
-                Toast.makeText(_self.activity, "Finished ", Toast.LENGTH_LONG).show();
+                Toast.makeText(_self.activity, "Finished ", Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -156,10 +158,25 @@ public class FragmentList extends Fragment {
             @Override
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
-                Toast.makeText(_self.activity, "Loading . . . ", Toast.LENGTH_LONG).show();
+                Toast.makeText(_self.activity, "Loading . . . ", Toast.LENGTH_SHORT).show();
+
             }
         });
 
+    }
+
+
+    public static class BroadcastListener extends BroadcastReceiver {
+        public void onReceive(Context context, Intent intent){
+            if (Instance == null || intent == null){
+                return;
+            }
+            String action = intent.getAction();
+            if (action.equals(MainActivity.INTERNET_STATUS)){
+                Toast.makeText(_self.activity, "NO connection to internet!", Toast.LENGTH_LONG).show();
+            }
+
+        }
     }
 
 }
