@@ -8,11 +8,19 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.widget.Toast;
+import com.actionbarsherlock.app.SherlockActivity;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
 import com.example.andik1212.services.InternetCheckService;
 
-public class MainActivity extends FragmentActivity {
+public class MainActivity extends SherlockFragmentActivity {
     public static String INTERNET_STATUS = "com.example.andik1212.DOWN";
     private static MainActivity Instance;
+
+
+    public static final int OPT_BUTTON_ALLLIKES = 0;
+
     /**
      * Called when the activity is first created.
      */
@@ -29,9 +37,13 @@ public class MainActivity extends FragmentActivity {
         }
     }
 
+
+
+
+
     public void onDestroy(){
         stopService(new Intent(this, InternetCheckService.class));
-        InternetCheckService.UPDATE = "com.example.andik1212.NULL";
+//        InternetCheckService.UPDATE = "com.example.andik1212.NULL";
         super.onDestroy();
     }
 

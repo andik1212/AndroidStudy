@@ -46,6 +46,7 @@ public class InternetCheckService extends Service {
     }
 
     public void onDestroy() {
+        timer.cancel();
         super.onDestroy();
     }
 

@@ -12,14 +12,20 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.*;
+import com.actionbarsherlock.app.SherlockFragment;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 import com.example.andik1212.helper.Article;
 import com.example.andik1212.helper.ArticleCollection;
 import com.example.andik1212.helper.CustomArrayAdapter;
 import com.example.andik1212.helper.GetNews;
 import com.example.andik1212.services.InternetCheckService;
 
-public class FragmentList extends Fragment {
+public class FragmentList extends SherlockFragment {
     private static FragmentList Instance;
+    protected LinearLayout loading_container;
+    protected View loading;
 
     static String[] values; //{ "new1", "new2", "new3", "new4", "new5", "new6"  };
     static String[] date;
@@ -51,12 +57,19 @@ public class FragmentList extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_list, container, false);
+        setHasOptionsMenu(true);
         return view;
     }
 
     @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+
+//        loading_container = (LinearLayout) view.findViewById(R.id.loading);
+//        loading = View.inflate(_self.activity, R.layout.loading, new LinearLayout(_self.activity));
+//        loading_container.removeView(loading);
+
+
         if (_self.restore && _self.articles.size() > 0){
             updateUi();
             _self.restore = false;
@@ -108,6 +121,7 @@ public class FragmentList extends Fragment {
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
                 Toast.makeText(_self.activity, "We loose an internet connection ;(", Toast.LENGTH_LONG).show();
+
             }
         });
     }
@@ -150,6 +164,7 @@ public class FragmentList extends Fragment {
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
                 Toast.makeText(_self.activity, "Finished ", Toast.LENGTH_SHORT).show();
+//                loading_container.removeView(loading);
             }
         });
     }
@@ -160,11 +175,30 @@ public class FragmentList extends Fragment {
             public void run() {
                 //To change body of implemented methods use File | Settings | File Templates.
                 Toast.makeText(_self.activity, "Loading . . . ", Toast.LENGTH_SHORT).show();
+//                loading_container.addView(loading);
 
             }
         });
 
     }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
+    {
+        menu.add(0, MainActivity.OPT_BUTTON_ALLLIKES,0,"All likes").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if(item.getItemId() == MainActivity.OPT_BUTTON_ALLLIKES)
+        {
+//            toDo on pressed
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
+
 
 
     public static class BroadcastListener extends BroadcastReceiver {

@@ -9,6 +9,9 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
+import com.actionbarsherlock.view.MenuItem;
 
 public class FragmentDetail extends Fragment {
 
@@ -39,6 +42,7 @@ public class FragmentDetail extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_detail, container, false);
+        setHasOptionsMenu(true);
         return view;
     }
 
@@ -82,6 +86,27 @@ public class FragmentDetail extends Fragment {
         super.onSaveInstanceState(outState);
         outState.putStringArray("text", text);
     }
+
+
+
+//    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
+    {
+        menu.add(0, ActivityDetail.OPT_BUTTON_LIKE,0,"like").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+        if(item.getItemId() == ActivityDetail.OPT_BUTTON_LIKE)
+        {
+//            toDo on pressed
+        }
+
+        return super.onOptionsItemSelected((android.view.MenuItem) item);
+    }
+
+
+
 
 //    public void setText(final String number, final int requestCode) {
 //        getActivity().runOnUiThread(new Runnable() {

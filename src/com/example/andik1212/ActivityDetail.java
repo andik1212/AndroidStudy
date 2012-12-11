@@ -3,9 +3,13 @@ package com.example.andik1212;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
+import com.actionbarsherlock.app.SherlockFragmentActivity;
+import com.actionbarsherlock.view.Menu;
+import com.actionbarsherlock.view.MenuInflater;
 
-public class ActivityDetail extends FragmentActivity {
+public class ActivityDetail extends SherlockFragmentActivity {
+    public static final int OPT_BUTTON_LIKE = 1;
+    public static final int OPT_BUTTON_DISLIKE = 2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +20,8 @@ public class ActivityDetail extends FragmentActivity {
             handleIntentExtras(getIntent());
         }
     }
+
+
 
     private void handleIntentExtras(Intent intent) {
         String[] text = new String[2];
