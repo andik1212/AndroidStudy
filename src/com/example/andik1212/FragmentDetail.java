@@ -9,11 +9,12 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 import android.widget.TextView;
+import com.actionbarsherlock.app.SherlockFragment;
 import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 import com.actionbarsherlock.view.MenuItem;
 
-public class FragmentDetail extends Fragment {
+public class FragmentDetail extends SherlockFragment {
 
     public static final String EXTRA_TEXT = "extra_text";
 
@@ -41,8 +42,8 @@ public class FragmentDetail extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.fragment_detail, container, false);
         setHasOptionsMenu(true);
+        view = inflater.inflate(R.layout.fragment_detail, container, false);
         return view;
     }
 
@@ -89,10 +90,9 @@ public class FragmentDetail extends Fragment {
 
 
 
-//    @Override
     public void onCreateOptionsMenu(Menu menu, MenuInflater inflater)
     {
-        menu.add(0, ActivityDetail.OPT_BUTTON_LIKE,0,"like").setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM);
+        menu.add(0, ActivityDetail.OPT_BUTTON_LIKE, 0, "like").setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
     }
 
     public boolean onOptionsItemSelected(MenuItem item)

@@ -8,8 +8,8 @@ import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuInflater;
 
 public class ActivityDetail extends SherlockFragmentActivity {
-    public static final int OPT_BUTTON_LIKE = 1;
-    public static final int OPT_BUTTON_DISLIKE = 2;
+    public static final int OPT_BUTTON_LIKE = 0;
+//    public static final int OPT_BUTTON_DISLIKE = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
